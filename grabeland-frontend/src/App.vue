@@ -17,6 +17,7 @@
 
 #nav {
   padding: 30px;
+  background-image: linear-gradient(to bottom right, red, orange);
 }
 
 #nav a {
