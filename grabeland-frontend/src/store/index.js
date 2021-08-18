@@ -1,11 +1,12 @@
-import { createStore } from "vuex"
-import booking from './modules/booking'
-
-const debug = process.env.NODE_ENV !== 'production'
+import { createStore } from 'vuex'
 
 export default createStore({
-  modules: {
-    booking
+  state: {
   },
-  strict: debug,
+  mutations: {
+  },
+  actions: {
+  },
+  modules: {
+  }
 })

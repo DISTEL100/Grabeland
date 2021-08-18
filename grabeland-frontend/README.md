@@ -1,4 +1,4 @@
-# gabeland-website
+# grabeland-frontend
 
 ## Project setup
 ```
