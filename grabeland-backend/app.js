@@ -1,12 +1,15 @@
-var createError = require('http-errors');
+require('dotenv').config()
 var express = require('express');
+var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var gardensRouter = require('./routes/gardens');
 var timeslotsRouter = require('./routes/timeslots');
+
 
 var app = express();
 
@@ -19,6 +22,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(cors());
+app.options('*', cors());
+
+app.set('port', (process.env.PORT || 61003));
 
 app.use('/', indexRouter);
 app.use('/gardens', gardensRouter);
