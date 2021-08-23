@@ -1,19 +1,24 @@
 <template>
-    <div class="home">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-        <button @click=getGardens> GÄRTEN </button>
-        {{gardens}}
+    <div id="Home">
+        <Intro/>
+        <About/>
+        <Artists/>
     </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
 import axios from 'axios'
+import Intro from '../components/Intro.vue'
+import About from '../components/About.vue'
+import Artists from '../components/Artists.vue'
+
 
 export default {
     name: 'Home',
     components: {
-        HelloWorld
+        Intro,
+        About,
+        Artists
     },
     data () {
         return {
@@ -31,3 +36,12 @@ export default {
     }
 }
 </script>
+
+<style scoped> 
+#Home {
+    border: solid 2px grey;
+    width: 100%;
+    box-sizing: border-box;
+    margin : 0 auto;
+} 
+</style>
