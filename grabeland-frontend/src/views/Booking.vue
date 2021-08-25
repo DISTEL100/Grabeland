@@ -41,11 +41,13 @@ import { mapGetters } from 'vuex'
 import BookingSelectDay from '../components/BookingSelectDay.vue'
 import BookingSelectSlot from '../components/BookingSelectSlot.vue'
 import BookingCredentials from '../components/BookingCredentials.vue'
+import {ElCard } from 'element-plus'
 
 export default {
     name: 'Booking',
     components: {
         BookingSelectDay,
+        ElCard,
         BookingSelectSlot,
         BookingCredentials
     },

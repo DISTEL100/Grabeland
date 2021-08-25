@@ -21,11 +21,16 @@
 </template>
 
 <script>
+import {ElForm,ElFormItem, ElMessageBox, ElInput, ElButton} from 'element-plus'
 import { mapGetters } from 'vuex'
 
 export default {
     name: 'BookingCredentials',
     components: {
+        ElForm,
+        ElFormItem,
+        ElInput,
+        ElButton
     },
     data() {
         return {
@@ -68,7 +73,7 @@ export default {
             this.$refs[formName].validate((valid) => {
                 console.log(this.time)
                 if (valid && this.date != '' && this.time != '') {
-                    this.$alert(
+                    ElMessageBox.alert(
 '<p style="font-family:\'IBM Plex\'">Vielen Dank für die Buchung! Wir haben dir eine E-Mail geschickt.</p>',
                         {
                             confirmButtonText: 'OK',
@@ -79,7 +84,7 @@ export default {
                             }
                         });
                 } else {
-                    this.$alert(
+                    ElMessageBox.alert(
 '<p style="font-family:\'IBM Plex\'">Fehler! Bitte Datum und Uhrzeit auswählen und Kontaktdaten eingeben.</p>',
                         {
                             confirmButtonText: 'OK',
