@@ -8,7 +8,7 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var gardensRouter = require('./routes/gardens');
-var timeslotsRouter = require('./routes/timeslots');
+var bookingRouter = require('./routes/booking');
 
 
 var app = express();
@@ -30,7 +30,7 @@ app.set('port', (process.env.PORT || 61003));
 
 app.use('/', indexRouter);
 app.use('/gardens', gardensRouter);
-app.use('/timeslots', timeslotsRouter);
+app.use('/booking', bookingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

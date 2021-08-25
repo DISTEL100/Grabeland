@@ -1,6 +1,6 @@
 <template>
     <div id="about">
-        ABOUT
+        <p> {{ $t('about.text') }} </p>
     </div>
 </template>
 
@@ -9,15 +9,17 @@ export default {
     name: 'About',
     data () {
         return { }
+    },
+    mounted() {
     }
 }
 </script>
 
 <style scoped>
 #about {
-    border: 2px solid green;
     box-sizing: border-box;
     width: 100%;
-    height: 70vh;
+    padding:3em  1em;
+
 }
 </style>

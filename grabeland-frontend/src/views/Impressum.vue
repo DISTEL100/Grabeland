@@ -21,8 +21,8 @@ export default {
 
 <style scoped> 
 #impressum {
-    border: 2px solid yellow;
-    width: 100%;
+    box-sizing: border-box;
+    border: 32px solid yellow;
     height: 70vh;
 }
 </style>

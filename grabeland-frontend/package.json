@@ -5,12 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
+    "@vuelidate/core": "^2.0.0-alpha.24",
+    "@vuelidate/validators": "^2.0.0-alpha.21",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "dotenv": "^10.0.0",
+    "element-plus": "^1.1.0-beta.4",
     "i18n": "^0.13.3",
     "vue": "^3.0.0",
     "vue-i18n": "^9.1.0",

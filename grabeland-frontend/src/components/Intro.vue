@@ -1,27 +1,32 @@
 <template>
-  <div id="intro">
- INTRO
- </div>
+    <div id="intro">
+        <img
+                id="title"
+                src="../assets/grabeland-logo.png" />
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'Intro',
+    name: 'Intro',
     data() {
         return {
         }
     },
     mounted() {
-        console.log(process.env.VUE_APP_BASE_URL)
-   }
+    }
 }
 </script>
 
 <style scoped>
 #intro {
-    border: 2px solid blue;
+    position: relative;
     width: 100%;
     box-sizing: border-box;
-    height: 70vh;
 }
+
+#title {
+    width: 100%;
+}
+
 </style>

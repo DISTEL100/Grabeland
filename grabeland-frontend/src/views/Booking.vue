@@ -1,48 +1,89 @@
 <template>
-    <div id="Booking"> 
-        BOOKING
+    <div id="booking">
+        <div class="control">
+        <p>{{ date }}</p>
+        <p>{{ time }}</p>
+        <p>{{ email }}</p>
+        <p>{{ name }}</p>
+        <p>{{ phone }}</p>
+        </div>
+
+        <el-card class="box-card">
+            <template #header>
+                <div class="card-header">
+                    <span>Wähle einen Tag</span>
+                </div>
+            </template>
+            <BookingSelectDay/>
+        </el-card>
+        <el-card class="box-card">
+            <template #header>
+                <div class="card-header">
+                    <span>Wähle eine Uhrzeit</span>
+                </div>
+            </template>
+                <BookingSelectSlot/>
+        </el-card>
+        <el-card class="box-card">
+            <template #header>
+                <div class="card-header">
+                    <span>Kontaktdaten</span>
+                </div>
+            </template>
+            <BookingCredentials/>
+        </el-card>
+
     </div>
-    </template>
+</template>
 
-    <script>
-    import axios from 'axios'
+<script>
+import { mapGetters } from 'vuex'
+import BookingSelectDay from '../components/BookingSelectDay.vue'
+import BookingSelectSlot from '../components/BookingSelectSlot.vue'
+import BookingCredentials from '../components/BookingCredentials.vue'
 
-    export default {
-        name: 'Booking',
-        components: {
-        },
-        data () {
-            return {
-                gardens: []
-            }
-        },
-        methods: {
-            getGardens() {
-                axios
-                    .get('gardens')
-                    .then( response => {
-                    this.gardens = response.data
-                })
+export default {
+    name: 'Booking',
+    components: {
+        BookingSelectDay,
+        BookingSelectSlot,
+        BookingCredentials
+    },
+    data() {
+        return {
+            
         }
+    },
+    computed: {
+        ...mapGetters([
+            'name',
+            'date',
+            'time',
+            'email',
+            'phone'
+            ])
+    },
+    mounted() {
     }
 }
 </script>
 
-<style scoped> 
-#p1 {
-    border: 1px solid red;
-    background: green;
-    height: 300px;
-    width: 300px;
-    mask-image: url('../assets/logo.png') ;
-    -webkit-mask-mode: alpha;
-    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+<style scoped>
+#booking {
+    width: 100%;
+    box-sizing: border-box;
 }
-#p2 {
-    position: absolute;
-    border: 1px solid red;
+span {
+    font-family: 'IBM Plex Title';
+    font-size: 2rem;
+}
+.control {
+    position:absolute;
+    left: 0;
+    top: 0;
     background: green;
-    clip-path:url(#Parzelle4);
-    height: 300px;
+}
+.el-card {
+    margin: 1em 0;
 }
 </style>

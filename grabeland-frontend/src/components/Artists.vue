@@ -1,6 +1,7 @@
 <template>
   <div id="artists">
-      ARTISTS
+      <h2>Mit Arbeiten von</h2>
+      <img id="artists_img" src="../assets/typ5.png" />
  </div>
 </template>
 
@@ -12,9 +13,16 @@ export default {
 
 <style scoped>
 #artists {
-    border: 2px solid red;
+    position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 70vh;
+    height: 100vh;
+}
+
+#artists_img {
+    width: 100%;
+/*
+filter: drop-shadow( 2px 2px red);
+*/
 }
 </style>
