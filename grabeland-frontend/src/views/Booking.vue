@@ -1,14 +1,6 @@
 <template>
-    <div id="booking">
-        <div class="control">
-        <p>{{ date }}</p>
-        <p>{{ time }}</p>
-        <p>{{ email }}</p>
-        <p>{{ name }}</p>
-        <p>{{ phone }}</p>
-        </div>
-
-        <el-card class="box-card">
+    <div id="booking" class="smallMargin">
+       <el-card class="box-card">
             <template #header>
                 <div class="card-header">
                     <span>Wähle einen Tag</span>
@@ -24,7 +16,7 @@
             </template>
                 <BookingSelectSlot/>
         </el-card>
-        <el-card class="box-card">
+        <el-card v-if="$store.getters.date != ''" class="box-card">
             <template #header>
                 <div class="card-header">
                     <span>Kontaktdaten</span>
@@ -53,7 +45,6 @@ export default {
     },
     data() {
         return {
-            
         }
     },
     computed: {
@@ -66,13 +57,14 @@ export default {
             ])
     },
     mounted() {
+        window.scrollTo(0,0)
     }
 }
 </script>
 
 <style scoped>
 #booking {
-    width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 span {

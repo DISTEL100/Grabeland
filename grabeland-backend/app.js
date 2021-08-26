@@ -7,8 +7,8 @@ var logger = require('morgan');
 var cors = require('cors');
 
 var indexRouter = require('./routes/index');
-var gardensRouter = require('./routes/gardens');
 var bookingRouter = require('./routes/booking');
+
 
 
 var app = express();
@@ -26,11 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.options('*', cors());
 
-app.set('port', (process.env.PORT || 61003));
+app.set('port', (process.env.PORT || 3001));
 
-app.use('/', indexRouter);
-app.use('/gardens', gardensRouter);
-app.use('/booking', bookingRouter);
+app.use('/bcknd', indexRouter);
+app.use('/bcknd/booking', bookingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

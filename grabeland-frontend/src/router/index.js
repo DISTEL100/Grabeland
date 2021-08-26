@@ -36,18 +36,14 @@ const routes = [
 ]
 
 const router = createRouter({
-    mode: 'history',
-    /*
-    scrollBehavior: function(to) {
-        if (to.hash) {
-            return {el: to.hash}
-        } else {
-            return { x: 0, y: 0 }
-        }
-    },
-    */
-    history: createWebHistory(process.env.BASE_URL),
+   history: createWebHistory(process.env.BASE_URL),
     routes
+})
+router.afterEach(() => {
+    setTimeout( () => {
+        window.scrollTo(0, 0)
+        document.getElementById('app').scrollTo(0,0)
+    },100)
 })
 
 export default router

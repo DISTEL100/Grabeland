@@ -21,8 +21,9 @@
 </template>
 
 <script>
-import {ElForm,ElFormItem, ElMessageBox, ElInput, ElButton} from 'element-plus'
+import { ElMessage, ElLoading, ElForm,ElFormItem,ElInput, ElButton} from 'element-plus'
 import { mapGetters } from 'vuex'
+import axios from 'axios'
 
 export default {
     name: 'BookingCredentials',
@@ -30,7 +31,7 @@ export default {
         ElForm,
         ElFormItem,
         ElInput,
-        ElButton
+        ElButton,
     },
     data() {
         return {
@@ -67,42 +68,62 @@ export default {
             this.$store.commit('name', this.personalData.name)
             this.$store.commit('email', this.personalData.email)
             this.$store.commit('phone', this.personalData.phone)
-},
+        },
         submitForm(formName) {
             this.sendToStore();
             this.$refs[formName].validate((valid) => {
-                console.log(this.time)
                 if (valid && this.date != '' && this.time != '') {
-                    ElMessageBox.alert(
-'<p style="font-family:\'IBM Plex\'">Vielen Dank für die Buchung! Wir haben dir eine E-Mail geschickt.</p>',
-                        {
-                            confirmButtonText: 'OK',
-                            dangerouslyUseHTMLString: true,
-                            callback: () => {
-                                this.$router.push('/')
-                                this.$store.commit('reset')
-                            }
-                        });
+                    this.valid()
                 } else {
-                    ElMessageBox.alert(
-'<p style="font-family:\'IBM Plex\'">Fehler! Bitte Datum und Uhrzeit auswählen und Kontaktdaten eingeben.</p>',
-                        {
-                            confirmButtonText: 'OK',
-                            dangerouslyUseHTMLString: true,
-                            callback: () => {
-                            }
-                        });
-                    console.log('error submit!!');
-                    return false;
+                    this.invalid()
                 }
             });
         },
+        async valid() {
+            let loadingInstance = ElLoading.service({ fullscreen: true });
+            let result = await this.bookTour()
+            if (result === 'success') {
+                //ERFOLG
+                console.log(result)
+                loadingInstance.close()
+                ElMessage.success({
+                    message: this.$t('booking.book1')
+                })
+                this.$router.push('/')
+                this.$store.commit('reset')
+            } else {
+                loadingInstance.close()
+                ElMessage.error({message: this.$t('booking.book3')})
+                this.$store.commit('reset')
+            }
+        },
+        invalid() {
+            ElMessage.error({message: this.$t('booking.book2')})
+        },
+        async bookTour() {
+            let res = await axios
+                .get('booking/confirm', { params: { 
+                    name: this.name,
+                    email: this.email,
+                    phone: this.phone,
+                    date: this.date,
+                    time: this.time,
+                    timeID: this.timeID,
+                    lang: this.$i18n.locale
+                } })
+            if (res.data.affectedRows === 1) {
+                return 'success'
+            } else {
+                return null
+            }
+        }
     },
     computed: {
         ...mapGetters([
 'name',
             'date',
             'time',
+            'timeID',
             'email',
             'phone'
         ])

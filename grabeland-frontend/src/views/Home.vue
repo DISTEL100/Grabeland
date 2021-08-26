@@ -2,8 +2,10 @@
     <div id="Home">
         <Intro/>
         <About/>
-        <BookATour/>
         <Artists/>
+        <BookATour/>
+        <Contact/>
+        <Impressum/>
     </div>
 </template>
 
@@ -12,13 +14,18 @@ import Intro from '../components/Intro.vue'
 import About from '../components/About.vue'
 import Artists from '../components/Artists.vue'
 import BookATour from '../components/BookATour.vue'
+import Contact from '../components/Contact.vue'
+import Impressum from '../components/Impressum.vue'
+
 export default {
     name: 'Home',
     components: {
         Intro,
         About,
         Artists,
-        BookATour
+        BookATour,
+        Contact,
+        Impressum
     },
     data () {
         return {

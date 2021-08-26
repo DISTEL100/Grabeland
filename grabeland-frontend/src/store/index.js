@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     date: '',
+      timeID: '',
       time: '',
       name: '',
       email: '',
@@ -14,6 +15,9 @@ export default createStore({
         },
         time: (state) => {
             return state.time
+        },
+        timeID: (state) => {
+            return state.timeID
         },
         name: (state) => {
             return state.name
@@ -29,6 +33,7 @@ export default createStore({
       reset (state) {
           state.date = '';
           state.time = '';
+          state.timeID = '';
           state.name = '';
           state.email = '';
           state.phone = '';
@@ -36,6 +41,9 @@ export default createStore({
       date (state, payload) {
           state.time = '';
           state.date = payload
+      },
+      timeID (state, payload) {
+          state.timeID = payload
       },
       time (state, payload) {
           state.time = payload

@@ -1,5 +1,5 @@
 <template>
-    <div id="intro">
+    <div id="intro" class="smallMargin">
         <img
                 id="title"
                 src="../assets/grabeland-logo.png" />
@@ -20,8 +20,7 @@ export default {
 
 <style scoped>
 #intro {
-    position: relative;
-    width: 100%;
+    margin: 0  auto;
     box-sizing: border-box;
 }
 
@@ -29,4 +28,9 @@ export default {
     width: 100%;
 }
 
+@media(max-width: 1000px) {
+    #title {
+        width: 100%;
+    }
+}
 </style>

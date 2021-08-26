@@ -2,7 +2,9 @@
     <div id="bookingSelect">
         <div class="tableContainer">
             <div class="rowContainer ausgabe1 ">
-                <p>Ausgabe I</p>
+                <h3>{{ $t('booking.ausgabe1') }}</h3>
+                <p>{{ $t('booking.a1text1') }}</p>
+                <p>{{ $t('booking.a1text2') }}</p>
                 <div class="row woche1 ">
                     <div @click="select('2021-09-16')" class="slot" :class="{ selected: date == '2021-09-16', zero: freeSeatsByDate('16.09') =='0' }">
                         <p class="date"> 16.09. </p>
@@ -31,7 +33,9 @@
             </div>
             <br>
             <div class="rowContainer ausgabe2 ">
-                <p>Ausgabe II</p>
+                 <h3>{{ $t('booking.ausgabe2') }}</h3>
+                <p>{{ $t('booking.a2text1') }}</p>
+                <p>{{ $t('booking.a2text2') }}</p>
                 <div class="row woche1 ">
                     <div @click="select('2021-09-30')" class="slot" :class="{ selected: date == '2021-09-30', zero: freeSeatsByDate('30.09') =='0' }">
                         <p class="date" >30.09.</p>
@@ -76,6 +80,7 @@ export default {
     },
     methods: {
         getFreeSeats() {
+                console.log(axios.defaults.baseURL)
             axios
                 .get('booking/freeseats')
                 .then(response => (this.freeSeats = response.data))
@@ -135,19 +140,23 @@ export default {
     border: 1px solid grey;
     margin: 0.2em;
     padding: 0.2em;
+    text-align: left;
     cursor: pointer;
 }
 p{
-    margin: 0.0em;
+    margin: 0.2em;
+}
+h3 {
+    margin: 0.2rem;
 }
 .empty {
     font-size: smaller;
 }
 .selected {
-    background: lightgreen;
+    background: yellow;
 }
 .zero {
     color: red;
-    cursor: default;
+    cursor: url('../assets/Cursor/Ameise2.png'), auto;
 }
 </style>

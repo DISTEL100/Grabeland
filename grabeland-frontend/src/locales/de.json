@@ -1,9 +1,36 @@
 {
     "message": "Hallo About",
     "about": {
-        "text": "Die Gruppenausstellung Grabeland (Future Splendors) findet vom 17.09.–09.10.2021 in verschiedenen Kleingärten im Leipziger Osten statt. Die zweiteilige Ausstellung betrachtet die Geschichte der Kleingartenkultur aus der Perspektive eines sozialistischen Ansatzes. Vor dem Hintergrund fortschreitender Urbanisierung und dem damit einhergehenden Verlust fruchtbaren Bodens, stellt sich die Frage nach Verteilung von — und Zugang zu — nutzbarem Grund und Anbauflächen. Welchen Wert bekommt der eigene Anbau von Nahrungsmitteln in einem zunehmend automatisierten Lebensumfeld? Wo liegen die Schnittpunkte zwischen dem Gärtnern und einem Kunstbegriff, der sich neoliberaler Wertekategorien entziehen möchte? Welche Formen des Dialogs bestehen zwischen Menschen sowie nichtmenschlichen Wesen? Abseits eines anthropozentrischen Selbstverständnisses, möchte die Ausstellung Perspektiven auf interspezifische Beziehungen zu Land und Landschaft vorstellen." 
+        "text1": "Die Gruppenausstellung Grabeland (Future Splendors) findet vom 17.09.–09.10.2021 in verschiedenen Kleingärten im Leipziger Osten statt. Die zweiteilige Ausstellung betrachtet die Geschichte der Kleingartenkultur aus der Perspektive eines sozialistischen Ansatzes. Vor dem Hintergrund fortschreitender Urbanisierung und dem damit einhergehenden Verlust fruchtbaren Bodens, stellt sich die Frage nach Verteilung von — und Zugang zu — nutzbarem Grund und Anbauflächen. Welchen Wert bekommt der eigene Anbau von Nahrungsmitteln in einem zunehmend automatisierten Lebensumfeld? Wo liegen die Schnittpunkte zwischen dem Gärtnern und einem Kunstbegriff, der sich neoliberaler Wertekategorien entziehen möchte? Welche Formen des Dialogs bestehen zwischen Menschen sowie nichtmenschlichen Wesen? Abseits eines anthropozentrischen Selbstverständnisses, möchte die Ausstellung Perspektiven auf interspezifische Beziehungen zu Land und Landschaft vorstellen.",
+        "text2": "Grabeland (Future Splendors) wird in zwei Ausgaben stattfinden, für die wir uns jeweils einen Rundgang für euch überlegt haben. Über das Buchungssystem (weiter unten) könnt ihr Slots für den Besuch der Ausstellung sichern. ",
+        "text3": "Das Ausstellungsprojekt ist großzügig gefördert durch das Kulturamt der Stadt Leipzig.",
+        "p": "Hier geht’s zum Programm:",
+        "p11": " Ausgabe I im KGV Sonnenglück und KGV Stünz\n mit Projekten von Peter Hermans, Steph Joyce, Inga Kerber, Peggy Pehl, Schmidt / Ruppert, Anne Schmidt und Lissy Willberg",
+        "p12": "Donnerstag, 16.09.2021, 16 Uhr, Eröffnung mit Performances von Anne Schmidt und Lissy Willberg",
+        "p13": "Freitag, 17.09.2021\ngeöffnet 16:00 - 19:00 Uhr",
+        "p14": "Samstag, 18.09.2021\ngeöffnet 16:00 - 19:00 Uhr",
+        "p15": "Freitag, 24.09.2021\ngeöffnet 16:00 - 19:00 Uhr\nmit Performances von Schmidt / Ruppert und Steph Joyce",
+        "p16": "Samstag, 25.09.2021\ngeöffnet 16:00 - 19:00 Uhr",
+        "p21": "Ausgabe II im KGV Buren\nmit Projekten von Judith Crasser, Ayala Guy, Jan Hashagen, Steph Joyce, Schmidt / Ruppert, David Rank, Lilian Walters und Rahel Zaugg",
+        "p22": "Donnerstag, 30.09.2021, 16 Uhr Eröffnung\nmit einer Sound-Installation von Judith Crasser und einer Performance von Schmidt / Ruppert",
+        "p23": "Freitag, 01.10.2021\ngeöffnet 16:00 - 19:00",
+        "p24": "Samstag, 02.10.2021\ngeöffnet 16:00 - 19:00",
+        "p25": "Freitag, 08.10.2021\ngeöffnet 16:00 - 19:00\nmit Performances von Steph Joyce und Ayala Guy",
+        "p26": "Samstag, 09.10.2021\ngeöffnet 16:00 - 19:00"
+    },
+    "artists": {
+        "t1": "Die Gruppenausstellung versammelt künstlerische Positionen von:"
     },
     "booking": {
-        "seats": "Plätze verfügbar"
+        "seats": "Plätze verfügbar",
+        "ausgabe1": "Ausgabe 1",
+        "ausgabe2": "Ausgabe 2",
+        "a1text1": "Rundgang in Gärten des KGV Sonnenglück und KGV Stünz mit Projekten von Peter Hermans, Steph Joyce, Inga Kerber, Peggy Pehl, Schmidt / Ruppert, Anne Schmidt und Lissy Willberg",
+        "a1text2": "Mit Performances am Donnerstag, den 16.09.2021, sowie Freitag, den 24.09.2021.",
+        "a2text1": "Rundgang in Gärten des KGV Buren mit Projekten von Judith Crasser, Ayala Guy, Jan Hashagen, Steph Joyce, Schmidt / Ruppert, David Rank, Lilian Walters und Rahel Zaugg",
+        "a2text2": "Mit Performances am Donnerstag, 30.09.2021 sowie Freitag, 08.10.2021",
+        "book1": "Deine Tour wurde gebucht!\nWir haben dir eine E-Mail geschickt!",
+        "book2": "Bitte Datum und Uhrzeit auswählen und Kontaktdaten eingeben!",
+        "book3": "Es gab einen Fehler :( Bitte probiere es noch einmal"
     }
 }

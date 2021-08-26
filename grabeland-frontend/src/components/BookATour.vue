@@ -1,7 +1,7 @@
 <template>
   <div id="bookATour">
       <router-link to="/booking">
-      <img src='../assets/Book.png' />
+      <img src='../assets/bookTour.png' />
       </router-link >
  </div>
 </template>
@@ -14,12 +14,21 @@ export default {
 
 <style scoped>
 #bookATour {
-    position: relative;
     box-sizing: border-box;
-    width: 100%;
 }
+
 img {
-    position: relative;
-    left: -30%;
+    display: block;
+    margin: 0 auto;
+    z-index: 10000;
+    filter: drop-shadow(1em 1em 0.3em black);
 }
+
+
+@media(max-width: 1000px) {
+    img {
+        width: 30%;
+    }
+}
+
 </style>

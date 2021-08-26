@@ -1,6 +1,6 @@
 <template>
-  <div id="artists">
-      <h2>Mit Arbeiten von</h2>
+  <div id="artists" class="smallMargin">
+        <p> {{ $t('artists.t1') }} </p>
       <img id="artists_img" src="../assets/typ5.png" />
  </div>
 </template>
@@ -13,16 +13,23 @@ export default {
 
 <style scoped>
 #artists {
+    margin: 0 auto;
     position: relative;
     box-sizing: border-box;
-    width: 100%;
-    height: 100vh;
 }
-
+p {
+    position: relative;
+    margin: 2rem;
+    top: 5rem;
+}
 #artists_img {
     width: 100%;
-/*
-filter: drop-shadow( 2px 2px red);
-*/
 }
+@media(max-width: 1000px) {
+#artists {
+    margin-top: 2rem;
+}
+}
+
+
 </style>

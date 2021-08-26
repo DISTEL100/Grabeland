@@ -5,7 +5,7 @@
                 <p class="warn" > Bitte zuerst ein Datum auswählen </p>
             </div>
             <div
-                @click="selectSlot(slot.ID)"
+                @click="selectSlot(slot.ID, slot.Time)"
                 v-for="slot in freeSlots"
                 v-bind:key="slot.Time" 
                 class="slot"
@@ -32,7 +32,7 @@ export default {
             return this.$store.getters.date
         },
         selectedTime() {
-            return this.$store.getters.time
+            return this.$store.getters.timeID
         }
     },
     props: {
@@ -55,11 +55,14 @@ export default {
                 .get('booking/slots', {params:{date: date} } )
                 .then(res => (this.freeSlots = res.data))
         },
-        selectSlot(id) {
+        selectSlot(id, time) {
             let slot = this.freeSlots.filter(s => s.ID == id)[0]
             console.log(slot)
+            console.log(id)
+            console.log(time)
             if ( slot.FreeTickets != '0' ) {
-            this.$store.commit('time', id)
+            this.$store.commit('timeID', id)
+            this.$store.commit('time', time)
             }
         },
         mounted() {
@@ -85,16 +88,17 @@ p{
     border: 1px solid grey;
     margin: 0.3em;
     padding: 0.3em;
+    text-align: left;
     cursor: pointer;
 }
 .tickets {
     font-size: smaller;
 }
 .selected {
-    background: lightgreen;
+    background: yellow;
 }
 .zero {
     color: red;
-    cursor: default;
+    cursor: url('../assets/Cursor/Ameise2.png'), auto;
 }
 </style>
