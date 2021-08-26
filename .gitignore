@@ -7,6 +7,8 @@ grabeland-frontend/dist
 .env.local
 .env.*.local
 .env
+.env.production
+.env.development
 
 # Log files
 npm-debug.log*
