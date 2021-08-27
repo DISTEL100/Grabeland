@@ -6,6 +6,12 @@ const routes = [
         name: 'Home',
         component: () => import(/* webpackChunkName: "booking" */ '../views/Home.vue'),
     },
+     {
+         path: '/storno/:ticketNo',
+        name: 'Storno',
+        component: () => import(/* webpackChunkName: "booking" */ '../views/Storno.vue'),
+         props: true
+    },
     {
         path: '/booking',
         name: 'Booking',

@@ -4,6 +4,7 @@
         <About/>
         <Artists/>
         <BookATour/>
+        <Program/>
         <Contact/>
         <Impressum/>
     </div>
@@ -16,10 +17,12 @@ import Artists from '../components/Artists.vue'
 import BookATour from '../components/BookATour.vue'
 import Contact from '../components/Contact.vue'
 import Impressum from '../components/Impressum.vue'
+import Program from '../components/Program.vue'
 
 export default {
     name: 'Home',
     components: {
+        Program,
         Intro,
         About,
         Artists,

@@ -16,10 +16,15 @@ export default {
 #impressum {
     margin: 0 auto;
     text-align: right;
+    cursor: url('../assets/Cursor/Ameise_hover_kleiner.png'), auto;
 }
 a {
+    cursor: url('../assets/Cursor/Ameise_hover_kleiner.png'), auto;
     text-decoration: none;
     color: black;
+}
+p {
+    cursor: url('../assets/Cursor/Ameise_hover_kleiner.png'), auto;
 }
 
 </style>

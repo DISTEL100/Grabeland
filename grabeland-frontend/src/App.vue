@@ -30,6 +30,9 @@ body {
 .smallMargin{
     width: 60rem;
 }
+a {
+    cursor: url('./assets/Cursor/Ameise_hover_kleiner.png'), auto;
+}
 #app {
     margin: 0 auto;
     cursor: url('./assets/Cursor/Ameise_kleiner.png'), auto;

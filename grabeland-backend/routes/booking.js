@@ -63,13 +63,24 @@ router.get('/confirm', async (req, res, next) => {
             "', '" +
             phone +
             "', " +
-           timeID +
+            timeID +
             " ) "
         )
-       await  mail.send(ticketNo, email, name, date, time, lang)
+        await  mail.send(ticketNo, email, name, date, time, lang)
         res.send(result);
     } catch (err) {
         throw err;
     }
 })
+
+router.get('/storno', async (req, res, next) => {
+    try {
+        let ticketNo = req.query["ticketNo"] 
+        let result = await db.pool.query("DELETE FROM Tickets WHERE TicketID = '" + ticketNo + "'")
+        res.send(result)
+    } catch (err) {
+        throw err;
+    }
+});
+
 module.exports = router;

@@ -28,30 +28,28 @@ var message = {
 var text = {
     t1: "Hallo ",
     name: "Unbekannte*r",
-    t2: "/nVielen Dank für deine Buchung!/n/nDein Slot is am",
-    date: "00.00.21",
-    t3: " um ",
-    time: "12:00",
-    t4: " Uhr. Startpunkt ist ",
-    adress: "Stünz-Mölkauer Weg 13",
-    t5: "\nBis dann, wir freuen uns auf dich!"
+    t2: ",\n\nVielen Dank für deine Buchung!\nWir freuen uns sehr, dass du Interesse hast unsere Ausstellung zu besuchen. Du erhältst vor deinem Besuch eine digitale Laufkarte und einen Startpunkt, um den Rundgang zu beginnen. Dafür werden wir uns nochmals per Email melden. Du kannst jederzeit Fragen stellen und auch eine Laufkarte in Papierform von den Aufsichtspersonen vor Ort erhalten.\nFür den Besuch musst du einen negativen Corona-Test vorweisen, der nicht älter als 24Std sein darf – auch bei vollständiger Impfung oder Genesung. Bitte beachte während der Begehung die allgemein geltenden Abstandsregeln und verhalte dich respektvoll gegenüber anderen Besucher:innen sowie den Gartenanlagen.\n\nDeine Ticketnummer ist: ",
+    ticketNo: "xxxxxxx",
+    t3: "\nFalls du dein Ticket stornieren möchtest klicke bitte auf diesen Link: https://handschu.uber.space/storno/",
+    t4: "\n\nViel Freude an Grabeland (Future Splendors)!",
 }
-function constructText(text) {
-    return text.t1 + text.name + text.t2 + text.date + text.t3 + text.time + text.t4 + text.adress +text.t5
+function constructText(name, ticketNo) {
+    return text.t1 + name + text.t2 + ticketNo + text.t3 + ticketNo + text.t4
 }
 
-function personalizeMail(name, email,ticketCode, message) {
-   message.to = email;
-
+function personalizeMail(name, email, date, time, ticketCode, message) {
+    message.to = email;
+    let date_f = date.split('-').reverse().join('.')
+    console.log(date_f)
+    message.subject = "Deine Tour am " + date_f + " um " + time + "Uhr";
+    message.text = constructText(name, ticketCode);
+    return message
 } 
 
 async function send(ticketNo, email, name, date, time, lang) {
-    await transporter.sendMail({
-        from: "booking@future-splendors.eu",
-        to: email,
-        subject: "Deine Buchung (TEST)",
-        text: "Hallooo!\nBuchung: " + date + " um " + time + "Uhr.\n" + "Deine Ticketnummer ist: " + ticketNo
-    })
+    await transporter.sendMail(
+        personalizeMail(name, email, date, time, ticketNo, {to: "", from: "booking@future-splendors.eu", subject: "", text: ""})
+    )
 }
 
 module.exports= {

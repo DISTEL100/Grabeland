@@ -31,7 +31,7 @@ img {
     width: 100%;
     margin: 0 auto;
     z-index: 10000;
-    filter: drop-shadow(0rem 0rem 0.5rem white);
+    filter: drop-shadow(0rem 0rem 0.5rem black) invert(1);
 }
 
 

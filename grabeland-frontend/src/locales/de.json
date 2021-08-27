@@ -1,5 +1,5 @@
 {
-    "message": "Hallo About",
+    "ja": "Ja",
     "about": {
         "text1": "Die Gruppenausstellung Grabeland (Future Splendors) findet vom 17.09.–09.10.2021 in verschiedenen Kleingärten im Leipziger Osten statt. Die zweiteilige Ausstellung betrachtet die Geschichte der Kleingartenkultur aus der Perspektive eines sozialistischen Ansatzes. Vor dem Hintergrund fortschreitender Urbanisierung und dem damit einhergehenden Verlust fruchtbaren Bodens, stellt sich die Frage nach Verteilung von — und Zugang zu — nutzbarem Grund und Anbauflächen. Welchen Wert bekommt der eigene Anbau von Nahrungsmitteln in einem zunehmend automatisierten Lebensumfeld? Wo liegen die Schnittpunkte zwischen dem Gärtnern und einem Kunstbegriff, der sich neoliberaler Wertekategorien entziehen möchte? Welche Formen des Dialogs bestehen zwischen Menschen sowie nichtmenschlichen Wesen? Abseits eines anthropozentrischen Selbstverständnisses, möchte die Ausstellung Perspektiven auf interspezifische Beziehungen zu Land und Landschaft vorstellen.",
         "text2": "Grabeland (Future Splendors) wird in zwei Ausgaben stattfinden, für die wir uns jeweils einen Rundgang für euch überlegt haben. Über das Buchungssystem (weiter unten) könnt ihr Slots für den Besuch der Ausstellung sichern. Das Ausstellungsprojekt ist großzügig gefördert durch das Kulturamt der Stadt Leipzig und versammelt künstlerische Positionen von:",
@@ -28,5 +28,10 @@
         "book1": "Deine Tour wurde gebucht!\nWir haben dir eine E-Mail geschickt!",
         "book2": "Bitte Datum und Uhrzeit auswählen und Kontaktdaten eingeben!",
         "book3": "Es gab einen Fehler :( Bitte probiere es noch einmal"
-    }
+    },
+    "storno": {
+       "confirm": "Buchung wirklick stornieren?",
+       "success": "Deine Buchung wurde erfolgreich storniert!",
+       "fail": "Es gab einen Fehler, bitte versuche es später noch einmal."
+       }
 }
