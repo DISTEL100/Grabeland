@@ -1,13 +1,12 @@
 <template>
-  <div id="artists" class="smallMargin">
-        <p> {{ $t('artists.t1') }} </p>
-      <img id="artists_img" src="../assets/typ5.png" />
- </div>
+    <div id="artists" class="smallMargin">
+        <img id="artists_img" src="../assets/typ5.png" />
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'Artists',
+    name: 'Artists',
 }
 </script>
 
@@ -19,16 +18,14 @@ export default {
 }
 p {
     position: relative;
-    margin: 2rem;
-    top: 5rem;
+    margin:2rem 0.6rem;
 }
 #artists_img {
     width: 100%;
 }
 @media(max-width: 1000px) {
-#artists {
-    margin-top: 2rem;
-}
+    #artists {
+    }
 }
 
 

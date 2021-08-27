@@ -20,23 +20,27 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background: url('./assets/Hintergrund/9pwN2lWg.jpeg');
-    cursor: url('./assets/Cursor/Ameise2.png'), auto;
+    background: url('./assets/Hintergrund/1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    cursor: url('./assets/Cursor/Ameise_kleiner.png'), auto;
 }
 .smallMargin{
     width: 60rem;
 }
 #app {
-    cursor: url('./assets/Cursor/Ameise2.png'), auto;
     margin: 0 auto;
+    cursor: url('./assets/Cursor/Ameise_kleiner.png'), auto;
     padding: 0;
     height: 100vh;
     max-width: 1300px;
     overflow: auto;
     font-family: 'IBM Plex';
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: justify;
-    line-height: 2.2;
+    line-height: 1.8;
     text-shadow: 3px 0  5px #FFF, 0 3px  5px #FFF, -3px 0  5px #FFF, 0 -3px  5px #FFF;
     box-sizing: border-box;
     scrollbar-width: none;

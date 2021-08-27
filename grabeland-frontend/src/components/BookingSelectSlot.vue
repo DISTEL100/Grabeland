@@ -89,7 +89,7 @@ p{
     margin: 0.3em;
     padding: 0.3em;
     text-align: left;
-    cursor: pointer;
+    cursor: url('../assets/Cursor/Ameise_hover_kleiner.png'), auto;
 }
 .tickets {
     font-size: smaller;
@@ -99,6 +99,6 @@ p{
 }
 .zero {
     color: red;
-    cursor: url('../assets/Cursor/Ameise2.png'), auto;
+    cursor: url('../assets/Cursor/Ameise_kleiner.png'), auto;
 }
 </style>

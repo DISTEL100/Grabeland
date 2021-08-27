@@ -2,8 +2,7 @@
     "message": "Hallo About",
     "about": {
         "text1": "Die Gruppenausstellung Grabeland (Future Splendors) findet vom 17.09.–09.10.2021 in verschiedenen Kleingärten im Leipziger Osten statt. Die zweiteilige Ausstellung betrachtet die Geschichte der Kleingartenkultur aus der Perspektive eines sozialistischen Ansatzes. Vor dem Hintergrund fortschreitender Urbanisierung und dem damit einhergehenden Verlust fruchtbaren Bodens, stellt sich die Frage nach Verteilung von — und Zugang zu — nutzbarem Grund und Anbauflächen. Welchen Wert bekommt der eigene Anbau von Nahrungsmitteln in einem zunehmend automatisierten Lebensumfeld? Wo liegen die Schnittpunkte zwischen dem Gärtnern und einem Kunstbegriff, der sich neoliberaler Wertekategorien entziehen möchte? Welche Formen des Dialogs bestehen zwischen Menschen sowie nichtmenschlichen Wesen? Abseits eines anthropozentrischen Selbstverständnisses, möchte die Ausstellung Perspektiven auf interspezifische Beziehungen zu Land und Landschaft vorstellen.",
-        "text2": "Grabeland (Future Splendors) wird in zwei Ausgaben stattfinden, für die wir uns jeweils einen Rundgang für euch überlegt haben. Über das Buchungssystem (weiter unten) könnt ihr Slots für den Besuch der Ausstellung sichern. ",
-        "text3": "Das Ausstellungsprojekt ist großzügig gefördert durch das Kulturamt der Stadt Leipzig.",
+        "text2": "Grabeland (Future Splendors) wird in zwei Ausgaben stattfinden, für die wir uns jeweils einen Rundgang für euch überlegt haben. Über das Buchungssystem (weiter unten) könnt ihr Slots für den Besuch der Ausstellung sichern. Das Ausstellungsprojekt ist großzügig gefördert durch das Kulturamt der Stadt Leipzig und versammelt künstlerische Positionen von:",
         "p": "Hier geht’s zum Programm:",
         "p11": " Ausgabe I im KGV Sonnenglück und KGV Stünz\n mit Projekten von Peter Hermans, Steph Joyce, Inga Kerber, Peggy Pehl, Schmidt / Ruppert, Anne Schmidt und Lissy Willberg",
         "p12": "Donnerstag, 16.09.2021, 16 Uhr, Eröffnung mit Performances von Anne Schmidt und Lissy Willberg",
@@ -17,9 +16,6 @@
         "p24": "Samstag, 02.10.2021\ngeöffnet 16:00 - 19:00",
         "p25": "Freitag, 08.10.2021\ngeöffnet 16:00 - 19:00\nmit Performances von Steph Joyce und Ayala Guy",
         "p26": "Samstag, 09.10.2021\ngeöffnet 16:00 - 19:00"
-    },
-    "artists": {
-        "t1": "Die Gruppenausstellung versammelt künstlerische Positionen von:"
     },
     "booking": {
         "seats": "Plätze verfügbar",

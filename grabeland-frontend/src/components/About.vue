@@ -2,7 +2,6 @@
     <div id="about" class="smallMargin">
         <p> {{ $t('about.text1') }} </p>
         <p> {{ $t('about.text2') }} </p>
-        <p> {{ $t('about.text3') }} </p>
     </div>
 </template>
 
@@ -19,7 +18,7 @@ export default {
 
 <style scoped>
 p {
-    margin: 2rem;
+    margin:2rem 0.6rem;
 }
 #about {
     box-sizing: border-box;

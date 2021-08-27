@@ -1,5 +1,13 @@
 <template>
     <div id="booking" class="smallMargin">
+        <el-card class="box-card">
+            <template #header>
+                <div class="card-header">
+                    <span> {{ $t('about.p') }}</span>
+                </div>
+            </template>
+            <Program/>
+        </el-card>
        <el-card class="box-card">
             <template #header>
                 <div class="card-header">
@@ -33,6 +41,7 @@ import { mapGetters } from 'vuex'
 import BookingSelectDay from '../components/BookingSelectDay.vue'
 import BookingSelectSlot from '../components/BookingSelectSlot.vue'
 import BookingCredentials from '../components/BookingCredentials.vue'
+import Program from '../components/Program.vue'
 import {ElCard } from 'element-plus'
 
 export default {
@@ -40,6 +49,7 @@ export default {
     components: {
         BookingSelectDay,
         ElCard,
+        Program,
         BookingSelectSlot,
         BookingCredentials
     },

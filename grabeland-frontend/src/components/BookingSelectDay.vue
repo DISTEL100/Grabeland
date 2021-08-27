@@ -141,7 +141,7 @@ export default {
     margin: 0.2em;
     padding: 0.2em;
     text-align: left;
-    cursor: pointer;
+    cursor: url('../assets/Cursor/Ameise_hover_kleiner.png'), auto;
 }
 p{
     margin: 0.2em;
@@ -157,6 +157,6 @@ h3 {
 }
 .zero {
     color: red;
-    cursor: url('../assets/Cursor/Ameise2.png'), auto;
+    cursor: url('../assets/Cursor/Ameise_kleiner.png'), auto;
 }
 </style>
